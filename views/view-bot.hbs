@@ -1,0 +1,41 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">View bot</li>
+  </ol>
+</nav>
+
+<div class ="view-bot p-5">
+
+    {{#each bot}}
+    <div class="row mb-5">
+        <div class="col text-center">
+            <h3>{{this.Name}}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table table-bordered">
+                <thead class="thead-dark"> 
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Comment</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">{{this.id}}</th>
+                        <td>{{this.ind}}</td>
+                        <td>{{this.Name}}</td>
+                        <td>{{this.comments}}</td>
+                        <td>{{this.status}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {{/each}}
+</div>
